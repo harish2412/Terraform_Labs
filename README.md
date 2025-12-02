@@ -1,6 +1,6 @@
-# 🌟 Terraform GCP Lab – Currency Converter App  
+# Terraform GCP Lab – Currency Converter App  
 
-### ✨ Changes I Made in This Lab
+### Changes I Made in This Lab
 This lab originally required only creating a simple VM using Terraform.  
 I enhanced the assignment into a complete cloud deployment project by adding:
 
@@ -13,7 +13,7 @@ I enhanced the assignment into a complete cloud deployment project by adding:
 
 ---
 
-# 🚀 Overview
+# Overview
 This project uses **Terraform** to deploy an end-to-end cloud environment on **Google Cloud Platform (GCP)** and automatically run a **Currency Converter Flask Web App** on a Compute Engine VM.
 
 Once deployed, the app is accessible at:
@@ -22,9 +22,9 @@ Once deployed, the app is accessible at:
 
 ---
 
-# 🏗 What Terraform Builds
+# What Terraform Builds
 
-## 1️⃣ Compute Engine VM – `currency-lab-vm`
+## Compute Engine VM – `currency-lab-vm`
 Terraform automatically provisions:
 
 - Machine: **e2-micro**
@@ -40,20 +40,20 @@ Terraform automatically provisions:
 
 ---
 
-## 2️⃣ Firewall Rule – `allow-http-5000`
+## Firewall Rule – `allow-http-5000`
 - Network: `default`
 - Opens **TCP 5000** to the internet
 - Applies only to VMs with the tag `currency-app`
 
 ---
 
-## 3️⃣ Cloud Storage Bucket – `hp-currency-lab-bucket-12345`
+## Cloud Storage Bucket – `hp-currency-lab-bucket-12345`
 - Region: `us-central1`
 - `force_destroy = true` (so `terraform destroy` works cleanly)
 
 ---
 
-## 4️⃣ Terraform Outputs
+## Terraform Outputs
 After deployment, Terraform prints:
 
 - **`web_vm_external_ip`**
